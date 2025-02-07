@@ -1,0 +1,9 @@
+Binaries/
+Cache/
+Intermediates/
+
+logs/
+
+.vs*
+**.sln
+**.csproj
