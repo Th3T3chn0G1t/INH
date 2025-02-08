@@ -1,5 +1,25 @@
 Scene: 0
 Entities:
+  - Entity: 19815753314333013
+    TagComponent:
+      Tag: Plane
+    Parent: 0
+    Children:
+      []
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Scale: [10, 1, 10]
+    StaticMeshComponent:
+      AssetID: 8171217422606744138
+      MaterialTable:
+        0: 0
+      Visible: true
+    BoxColliderComponent:
+      Offset: [0, -0.0199999996, 0]
+      HalfSize: [0.5, 0.0199999996, 0.5]
+      Friction: 0.5
+      Restitution: 0.150000006
   - Entity: 7713860285164757918
     TagComponent:
       Tag: Point Light
@@ -19,23 +39,53 @@ Entities:
       Radius: 10
       LightSize: 0.5
       Falloff: 1
-  - Entity: 8018350220325343310
+  - Entity: 8553171083212853354
     TagComponent:
-      Tag: Plane
+      Tag: Camera
+    Parent: 14432349704736520687
+    Children:
+      - Handle: 10054935947377020480
+    TransformComponent:
+      Position: [0, 0.75, 0]
+      Rotation: [0, 0, 0]
+      Scale: [1, 1, 1]
+    CameraComponent:
+      Camera:
+        ProjectionType: 0
+        PerspectiveFOV: 100
+        PerspectiveNear: 0.100000001
+        PerspectiveFar: 1000
+        OrthographicSize: 10
+        OrthographicNear: -1
+        OrthographicFar: 1
+      Primary: true
+  - Entity: 10054935947377020480
+    TagComponent:
+      Tag: Anchor
+    Parent: 8553171083212853354
+    Children:
+      []
+    TransformComponent:
+      Position: [0, 0, -1.5]
+      Rotation: [0, -0, 0]
+      Scale: [1, 1, 1]
+  - Entity: 13646187705408424405
+    TagComponent:
+      Tag: Cube
     Parent: 0
     Children:
       []
     TransformComponent:
-      Position: [0, 0, 0]
+      Position: [0, 0.800620914, -1.22877717]
       Rotation: [0, 0, 0]
-      Scale: [10, 1, 10]
+      Scale: [0.5, 0.5, 0.5]
     StaticMeshComponent:
-      AssetID: 15589013514677807786
+      AssetID: 5264294189307325869
       MaterialTable:
         0: 0
       Visible: true
     RigidBodyComponent:
-      BodyType: 0
+      BodyType: 1
       LayerID: 0
       EnableDynamicTypeChange: false
       Mass: 1
@@ -49,31 +99,11 @@ Entities:
       MaxLinearVelocity: 500
       MaxAngularVelocity: 50
       LockedAxes: 0
-    MeshColliderComponent:
-      UseSharedShape: false
+    BoxColliderComponent:
+      Offset: [0, 0, 0]
+      HalfSize: [0.5, 0.5, 0.5]
       Friction: 0.5
       Restitution: 0.150000006
-      CollisionComplexity: "\x00"
-  - Entity: 8553171083212853354
-    TagComponent:
-      Tag: Camera
-    Parent: 14432349704736520687
-    Children:
-      []
-    TransformComponent:
-      Position: [0, 0, 0]
-      Rotation: [0, 0, 0]
-      Scale: [1, 1, 1]
-    CameraComponent:
-      Camera:
-        ProjectionType: 0
-        PerspectiveFOV: 100
-        PerspectiveNear: 0.100000001
-        PerspectiveFar: 1000
-        OrthographicSize: 10
-        OrthographicNear: -1
-        OrthographicFar: 1
-      Primary: true
   - Entity: 14432349704736520687
     TagComponent:
       Tag: Player
@@ -85,17 +115,29 @@ Entities:
       Rotation: [0, 0, 0]
       Scale: [1, 1, 1]
     ScriptComponent:
-      ScriptID: 3090108948
+      ScriptID: 2559095579
       ScriptName: INH.Player
       Fields:
-        - ID: 4086046411
+        - ID: 2350791920
           Name: Speed
           Type: Float
-          Value: 500
-        - ID: 1497087836
+          Value: 400
+        - ID: 1428943413
           Name: MouseSensitivity
           Type: Float
-          Value: 0.0500000007
+          Value: 0.100000001
+        - ID: 3989978517
+          Name: AnchorForce
+          Type: Float
+          Value: 50
+        - ID: 714686330
+          Name: Camera
+          Type: Entity
+          Value: 8553171083212853354
+        - ID: 2239701388
+          Name: Anchor
+          Type: Entity
+          Value: 10054935947377020480
     RigidBodyComponent:
       BodyType: 1
       LayerID: 0

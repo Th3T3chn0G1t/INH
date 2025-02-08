@@ -1,16 +1,25 @@
 Assets:
+  - Handle: 29654835660494314
+    FilePath: Meshes/Plane.hsmesh
+    Type: StaticMesh
+  - Handle: 1867800497170282364
+    FilePath: Meshes/Cube.hsmesh
+    Type: StaticMesh
+  - Handle: 3427375570424237803
+    FilePath: Scripts/Source/Interactable.cs
+    Type: ScriptFile
   - Handle: 3726671409096266301
     FilePath: Meshes/Default/Source/Capsule.gltf
     Type: MeshSource
   - Handle: 4535190659032424754
     FilePath: Meshes/Default/Source/Sphere.gltf
     Type: MeshSource
-  - Handle: 4856627114210346901
-    FilePath: Scripts/Intermediates/Debug/INH.AssemblyInfo.cs
-    Type: ScriptFile
   - Handle: 5174160354107899352
     FilePath: Scripts/Intermediates/Debug/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs
     Type: ScriptFile
+  - Handle: 5264294189307325869
+    FilePath: Meshes/Default/Cube.hsmesh
+    Type: StaticMesh
   - Handle: 5269881090967061753
     FilePath: Scripts/Source/Player.cs
     Type: ScriptFile
@@ -26,12 +35,18 @@ Assets:
   - Handle: 7937276795640130957
     FilePath: Meshes/Default/Source/Cone.gltf
     Type: MeshSource
+  - Handle: 8171217422606744138
+    FilePath: Meshes/Default/Plane.hsmesh
+    Type: StaticMesh
   - Handle: 10997819181277827206
     FilePath: Meshes/Default/Source/Cylinder.gltf
     Type: MeshSource
   - Handle: 11421453773476102121
     FilePath: Meshes/Default/Source/Plane.gltf
     Type: MeshSource
-  - Handle: 15589013514677807786
-    FilePath: Meshes/Plane.hsmesh
-    Type: StaticMesh
+  - Handle: 13097072526739511915
+    FilePath: Scripts/Intermediates/Debug/INH.AssemblyInfo.cs
+    Type: ScriptFile
+  - Handle: 16382268123247685712
+    FilePath: Scripts/Intermediates/Debug/ImNotHungry.AssemblyInfo.cs
+    Type: ScriptFile
