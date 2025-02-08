@@ -8,7 +8,7 @@ Project:
   AnimationPath: Assets/Animation
   ScriptModulePath: Assets/Scripts/Binaries
   DefaultNamespace: ImNotHungry
-  StartScene: Scenes/SceneTestRunner.hscene
+  StartScene: Scenes/0.hscene
   AutomaticallyReloadAssembly: true
   AutoSave: false
   AutoSaveInterval: 300

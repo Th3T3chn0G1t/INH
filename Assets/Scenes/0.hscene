@@ -19,6 +19,41 @@ Entities:
       Radius: 10
       LightSize: 0.5
       Falloff: 1
+  - Entity: 8018350220325343310
+    TagComponent:
+      Tag: Plane
+    Parent: 0
+    Children:
+      []
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Scale: [10, 1, 10]
+    StaticMeshComponent:
+      AssetID: 15589013514677807786
+      MaterialTable:
+        0: 0
+      Visible: true
+    RigidBodyComponent:
+      BodyType: 0
+      LayerID: 0
+      EnableDynamicTypeChange: false
+      Mass: 1
+      LinearDrag: 0.00999999978
+      AngularDrag: 0.0500000007
+      DisableGravity: false
+      IsTrigger: false
+      CollisionDetection: 0
+      InitialLinearVelocity: [0, 0, 0]
+      InitialAngularVelocity: [0, 0, 0]
+      MaxLinearVelocity: 500
+      MaxAngularVelocity: 50
+      LockedAxes: 0
+    MeshColliderComponent:
+      UseSharedShape: false
+      Friction: 0.5
+      Restitution: 0.150000006
+      CollisionComplexity: "\x00"
   - Entity: 8553171083212853354
     TagComponent:
       Tag: Camera
@@ -39,41 +74,6 @@ Entities:
         OrthographicNear: -1
         OrthographicFar: 1
       Primary: true
-  - Entity: 13007066843226249946
-    TagComponent:
-      Tag: Plane
-    Parent: 0
-    Children:
-      []
-    TransformComponent:
-      Position: [0, 0, 0]
-      Rotation: [0, 0, 0]
-      Scale: [10, 1, 10]
-    StaticMeshComponent:
-      AssetID: 332200825215711688
-      MaterialTable:
-        0: 0
-      Visible: true
-    RigidBodyComponent:
-      BodyType: 0
-      LayerID: 0
-      EnableDynamicTypeChange: false
-      Mass: 1
-      LinearDrag: 0.00999999978
-      AngularDrag: 0.0500000007
-      DisableGravity: false
-      IsTrigger: false
-      CollisionDetection: 0
-      InitialLinearVelocity: [0, 0, 0]
-      InitialAngularVelocity: [0, 0, 0]
-      MaxLinearVelocity: 500
-      MaxAngularVelocity: 50
-      LockedAxes: 0
-    BoxColliderComponent:
-      Offset: [0, -0.5, 0]
-      HalfSize: [0.5, 0.5, 0.5]
-      Friction: 0.5
-      Restitution: 0.150000006
   - Entity: 14432349704736520687
     TagComponent:
       Tag: Player

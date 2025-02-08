@@ -1,0 +1,37 @@
+Assets:
+  - Handle: 3726671409096266301
+    FilePath: Meshes/Default/Source/Capsule.gltf
+    Type: MeshSource
+  - Handle: 4535190659032424754
+    FilePath: Meshes/Default/Source/Sphere.gltf
+    Type: MeshSource
+  - Handle: 4856627114210346901
+    FilePath: Scripts/Intermediates/Debug/ImNotHungry.AssemblyInfo.cs
+    Type: ScriptFile
+  - Handle: 5174160354107899352
+    FilePath: Scripts/Intermediates/Debug/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs
+    Type: ScriptFile
+  - Handle: 5269881090967061753
+    FilePath: Scripts/Source/Player.cs
+    Type: ScriptFile
+  - Handle: 5452190451170086810
+    FilePath: Meshes/Default/Source/Torus.gltf
+    Type: MeshSource
+  - Handle: 6185466444930302971
+    FilePath: Meshes/Default/Source/Cube.gltf
+    Type: MeshSource
+  - Handle: 7099191005587862884
+    FilePath: Scenes/0.hscene
+    Type: Scene
+  - Handle: 7937276795640130957
+    FilePath: Meshes/Default/Source/Cone.gltf
+    Type: MeshSource
+  - Handle: 10997819181277827206
+    FilePath: Meshes/Default/Source/Cylinder.gltf
+    Type: MeshSource
+  - Handle: 11421453773476102121
+    FilePath: Meshes/Default/Source/Plane.gltf
+    Type: MeshSource
+  - Handle: 15589013514677807786
+    FilePath: Meshes/Plane.hsmesh
+    Type: StaticMesh
