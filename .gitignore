@@ -2,8 +2,14 @@ Binaries/
 Cache/
 Intermediates/
 
+obj/
+bin/
+
+*.log
 logs/
 
 .vs*
-**.sln
-**.csproj
+*.sln.*
+*.csproj*
+
+.idea/

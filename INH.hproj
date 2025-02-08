@@ -1,83 +1,83 @@
 Project:
-	Name: ImNotHungry
-	AssetDirectory: Assets
-	AssetRegistry: Assets/AssetRegistry.hzr
-	AudioCommandsRegistryPath: Assets/AudioCommandsRegistry.hzr
-	MeshPath: Assets/Meshes
-	MeshSourcePath: Assets/Meshes/Source
-	AnimationPath: Assets/Animation
-	ScriptModulePath: Assets/Scripts/Binaries
-	DefaultNamespace: ImNotHungry
-	StartScene: Scenes/SceneTestRunner.hscene
-	AutomaticallyReloadAssembly: true
-	AutoSave: false
-	AutoSaveInterval: 300
-	Audio:
-		FileStreamingDurationThreshold: 30
-	Physics:
-		FixedTimestep: 0.00999999978
-		Gravity: [0, -9.81000042, 0]
-		SolverPositionIterations: 8
-		SolverVelocityIterations: 2
-		MaxBodies: 1000
-		CaptureOnPlay: true
-		CaptureMethod: 0
-		Layers:
-	Log:
-		Animation:
-			Enabled: true
-			LevelFilter: Error
-		Asset Pack:
-			Enabled: true
-			LevelFilter: Warn
-		AssetManager:
-			Enabled: true
-			LevelFilter: Fatal
-		AssetSystem:
-			Enabled: true
-			LevelFilter: Trace
-		Assimp:
-			Enabled: true
-			LevelFilter: Fatal
-		Audio:
-			Enabled: true
-			LevelFilter: Error
-		CookingFactory:
-			Enabled: true
-			LevelFilter: Trace
-		Core:
-			Enabled: true
-			LevelFilter: Trace
-		GLFW:
-			Enabled: true
-			LevelFilter: Trace
-		Memory:
-			Enabled: true
-			LevelFilter: Error
-		Mesh:
-			Enabled: true
-			LevelFilter: Error
-		Physics:
-			Enabled: true
-			LevelFilter: Trace
-		Project:
-			Enabled: true
-			LevelFilter: Warn
-		Renderer:
-			Enabled: true
-			LevelFilter: Error
-		Scene:
-			Enabled: true
-			LevelFilter: Trace
-		Scripting:
-			Enabled: true
-			LevelFilter: Trace
-		Sound Spatializer:
-			Enabled: true
-			LevelFilter: Trace
-		Timer:
-			Enabled: true
-			LevelFilter: Trace
-		miniaudio:
-			Enabled: true
-			LevelFilter: Error
+    Name: ImNotHungry
+    AssetDirectory: Assets
+    AssetRegistry: Assets/AssetRegistry.hzr
+    AudioCommandsRegistryPath: Assets/AudioCommandsRegistry.hzr
+    MeshPath: Assets/Meshes
+    MeshSourcePath: Assets/Meshes/Source
+    AnimationPath: Assets/Animation
+    ScriptModulePath: Assets/Scripts/Binaries
+    DefaultNamespace: ImNotHungry
+    StartScene: Scenes/0.hscene
+    AutomaticallyReloadAssembly: true
+    AutoSave: false
+    AutoSaveInterval: 300
+    Audio:
+        FileStreamingDurationThreshold: 30
+    Physics:
+        FixedTimestep: 0.00999999978
+        Gravity: [0, -9.81000042, 0]
+        SolverPositionIterations: 8
+        SolverVelocityIterations: 2
+        MaxBodies: 1000
+        CaptureOnPlay: true
+        CaptureMethod: 0
+        Layers:
+    Log:
+        Animation:
+            Enabled: true
+            LevelFilter: Error
+        Asset Pack:
+            Enabled: true
+            LevelFilter: Warn
+        AssetManager:
+            Enabled: true
+            LevelFilter: Fatal
+        AssetSystem:
+            Enabled: true
+            LevelFilter: Trace
+        Assimp:
+            Enabled: true
+            LevelFilter: Fatal
+        Audio:
+            Enabled: true
+            LevelFilter: Error
+        CookingFactory:
+            Enabled: true
+            LevelFilter: Trace
+        Core:
+            Enabled: true
+            LevelFilter: Trace
+        GLFW:
+            Enabled: true
+            LevelFilter: Trace
+        Memory:
+            Enabled: true
+            LevelFilter: Error
+        Mesh:
+            Enabled: true
+            LevelFilter: Error
+        Physics:
+            Enabled: true
+            LevelFilter: Trace
+        Project:
+            Enabled: true
+            LevelFilter: Warn
+        Renderer:
+            Enabled: true
+            LevelFilter: Error
+        Scene:
+            Enabled: true
+            LevelFilter: Trace
+        Scripting:
+            Enabled: true
+            LevelFilter: Trace
+        Sound Spatializer:
+            Enabled: true
+            LevelFilter: Trace
+        Timer:
+            Enabled: true
+            LevelFilter: Trace
+        miniaudio:
+            Enabled: true
+            LevelFilter: Error
