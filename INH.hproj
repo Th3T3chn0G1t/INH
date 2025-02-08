@@ -1,5 +1,5 @@
 Project:
-  Name: ImNotHungry
+  Name: INH
   AssetDirectory: Assets
   AssetRegistry: Assets/AssetRegistry.hzr
   AudioCommandsRegistryPath: Assets/AudioCommandsRegistry.hzr
@@ -7,7 +7,7 @@ Project:
   MeshSourcePath: Assets/Meshes/Source
   AnimationPath: Assets/Animation
   ScriptModulePath: Assets/Scripts/Binaries
-  DefaultNamespace: ImNotHungry
+  DefaultNamespace: INH
   StartScene: Scenes/0.hscene
   AutomaticallyReloadAssembly: true
   AutoSave: false

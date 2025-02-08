@@ -9,7 +9,7 @@ bin/
 logs/
 
 .vs*
-*.sln.*
+*.sln*
 *.csproj*
 
 .idea/

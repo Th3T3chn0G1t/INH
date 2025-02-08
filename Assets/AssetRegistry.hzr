@@ -6,7 +6,7 @@ Assets:
     FilePath: Meshes/Default/Source/Sphere.gltf
     Type: MeshSource
   - Handle: 4856627114210346901
-    FilePath: Scripts/Intermediates/Debug/ImNotHungry.AssemblyInfo.cs
+    FilePath: Scripts/Intermediates/Debug/INH.AssemblyInfo.cs
     Type: ScriptFile
   - Handle: 5174160354107899352
     FilePath: Scripts/Intermediates/Debug/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs

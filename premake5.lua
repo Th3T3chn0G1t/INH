@@ -1,6 +1,6 @@
 HAZEL = os.getenv("HAZEL_DIR")
 
-workspace "ImNotHungry"
+workspace "INH"
 	configurations
 	{
 		"Debug",
@@ -12,7 +12,7 @@ group "Hazel"
 	include (path.join(HAZEL, "Hazel-ScriptCore"))
 group ""
 
-project "ImNotHungry"
+project "INH"
 	location "Assets/Scripts"
 
 	targetdir "%{prj.location}/Binaries"

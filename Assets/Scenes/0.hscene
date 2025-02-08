@@ -86,7 +86,7 @@ Entities:
       Scale: [1, 1, 1]
     ScriptComponent:
       ScriptID: 3090108948
-      ScriptName: ImNotHungry.Player
+      ScriptName: INH.Player
       Fields:
         - ID: 4086046411
           Name: Speed

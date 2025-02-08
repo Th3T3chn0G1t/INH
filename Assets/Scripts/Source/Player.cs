@@ -1,7 +1,7 @@
 using System.Diagnostics;
 using Hazel;
 
-namespace ImNotHungry
+namespace INH
 {
 	public class Player : Entity
 	{
