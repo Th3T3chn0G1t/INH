@@ -22,6 +22,11 @@ Project:
     MaxBodies: 1000
     CaptureOnPlay: true
     CaptureMethod: 0
+    Layers:
+      - Name: Player
+        CollidesWithSelf: false
+        CollidesWith:
+          - Name: Default
   Log:
     Animation:
       Enabled: true

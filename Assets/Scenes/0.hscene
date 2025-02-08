@@ -2,14 +2,14 @@ Scene: 0
 Entities:
   - Entity: 19815753314333013
     TagComponent:
-      Tag: Plane
-    Parent: 0
+      Tag: Floor
+    Parent: 13891774330559181444
     Children:
       []
     TransformComponent:
       Position: [0, 0, 0]
-      Rotation: [0, 0, 0]
-      Scale: [10, 1, 10]
+      Rotation: [0, -0, 0]
+      Scale: [100, 1, 100]
     StaticMeshComponent:
       AssetID: 8171217422606744138
       MaterialTable:
@@ -20,25 +20,6 @@ Entities:
       HalfSize: [0.5, 0.0199999996, 0.5]
       Friction: 0.5
       Restitution: 0.150000006
-  - Entity: 7713860285164757918
-    TagComponent:
-      Tag: Point Light
-    Parent: 0
-    Children:
-      []
-    TransformComponent:
-      Position: [0, 1.90047288, 0]
-      Rotation: [0, 0, 0]
-      Scale: [1, 1, 1]
-    PointLightComponent:
-      Radiance: [1, 1, 1]
-      Intensity: 1
-      CastShadows: true
-      SoftShadows: true
-      MinRadius: 1
-      Radius: 10
-      LightSize: 0.5
-      Falloff: 1
   - Entity: 8553171083212853354
     TagComponent:
       Tag: Camera
@@ -69,6 +50,25 @@ Entities:
       Position: [0, 0, -1.5]
       Rotation: [0, -0, 0]
       Scale: [1, 1, 1]
+  - Entity: 13457004416785271074
+    TagComponent:
+      Tag: Spot Light
+    Parent: 0
+    Children:
+      []
+    TransformComponent:
+      Position: [2.2525154e-07, 6.9194603, -1.87180461e-07]
+      Rotation: [0, 0, 1.57079637]
+      Scale: [1, 1, 1]
+    SpotLightComponent:
+      Radiance: [0.620967746, 0.470733613, 0.470733613]
+      Angle: 157.600006
+      AngleAttenuation: 0.560000002
+      CastsShadows: false
+      SoftShadows: false
+      Falloff: 1
+      Intensity: 2
+      Range: 10.1999998
   - Entity: 13646187705408424405
     TagComponent:
       Tag: Cube
@@ -102,8 +102,18 @@ Entities:
     BoxColliderComponent:
       Offset: [0, 0, 0]
       HalfSize: [0.5, 0.5, 0.5]
-      Friction: 0.5
-      Restitution: 0.150000006
+      Friction: 1
+      Restitution: 0
+  - Entity: 13891774330559181444
+    TagComponent:
+      Tag: Static
+    Parent: 0
+    Children:
+      - Handle: 19815753314333013
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Scale: [1, 1, 1]
   - Entity: 14432349704736520687
     TagComponent:
       Tag: Player
@@ -125,11 +135,27 @@ Entities:
         - ID: 1428943413
           Name: MouseSensitivity
           Type: Float
-          Value: 0.100000001
+          Value: 0.5
         - ID: 3989978517
           Name: AnchorForce
           Type: Float
-          Value: 50
+          Value: 10000
+        - ID: 1594852342
+          Name: AnchorMax
+          Type: Float
+          Value: 3
+        - ID: 649071584
+          Name: HoldAngularDrag
+          Type: Float
+          Value: 10
+        - ID: 2691199528
+          Name: InteractDistance
+          Type: Float
+          Value: 2.5
+        - ID: 2098409837
+          Name: HoldLinearDrag
+          Type: Float
+          Value: 10
         - ID: 714686330
           Name: Camera
           Type: Entity
@@ -140,7 +166,7 @@ Entities:
           Value: 10054935947377020480
     RigidBodyComponent:
       BodyType: 1
-      LayerID: 0
+      LayerID: 1
       EnableDynamicTypeChange: false
       Mass: 1
       LinearDrag: 0.00999999978
@@ -154,8 +180,8 @@ Entities:
       MaxAngularVelocity: 50
       LockedAxes: 56
     CapsuleColliderComponent:
-      Radius: 0.5
-      HalfHeight: 0.5
+      Radius: 0.300000012
+      HalfHeight: 0.400000006
       Offset: [0, 0, 0]
       Friction: 0.5
       Restitution: 0.150000006

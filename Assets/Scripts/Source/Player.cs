@@ -1,3 +1,4 @@
+using System;
 using Hazel;
 
 namespace INH;
@@ -18,6 +19,9 @@ public class Player : Entity
 
 		public float AnchorForce = 1.0f;
 		public float InteractDistance = 4.0f;
+		public float AnchorMax = 4.0f;
+		public float HoldLinearDrag = 1.0f;
+		public float HoldAngularDrag = 1.0f;
 
 		public Entity Camera;	
 		public Entity Anchor;	
@@ -42,6 +46,11 @@ public class Player : Entity
 		{
 			public RigidBodyComponent Rigidbody;
 			public TransformComponent Transform;
+
+			public float LinearDrag;
+			public float AngularDrag;
+			public uint Layer;
+			// public bool Gravity;
 		}
 
 		private HeldObject? _heldObject;
@@ -64,7 +73,7 @@ public class Player : Entity
 
 		_cameraTransform = Camera.GetComponent<TransformComponent>()!;
 		_anchorTransform = Anchor.GetComponent<TransformComponent>()!;
-		
+
 		_interactRaycastData = new()
 		{
 			MaxDistance = InteractDistance,
@@ -193,7 +202,7 @@ public class Player : Entity
 
 		// Interaction
 		{
-			DebugRenderer.DrawLine(_lastInteractPosition, _lastInteractDirection * _interactRaycastData.MaxDistance, Color.Green);
+			DebugRenderer.DrawLine(_lastInteractPosition, _lastInteractDirection * InteractDistance, Color.Green);
 
 			if(Input.IsMouseButtonPressed(MouseButton.Left))
 			{
@@ -218,13 +227,25 @@ public class Player : Entity
 			if(_heldObject != null)
 			{
 				var delta = _anchorTransform.WorldTransform.Position - _heldObject.Value.Transform.WorldTransform.Position;
-				_heldObject.Value.Rigidbody.AddForce(delta * AnchorForce);
+
+				if(delta.Length() > AnchorMax)
+				{
+					Drop();
+				}
+				else
+				{
+					_heldObject.Value.Rigidbody.AddForce(delta * AnchorForce * ts);
+				}
 			}
 		}
 	}
 
 	private void Drop()
 	{
+		_heldObject.Value.Rigidbody.LinearDrag = _heldObject.Value.LinearDrag;
+		_heldObject.Value.Rigidbody.AngularDrag = _heldObject.Value.AngularDrag;
+		_heldObject.Value.Rigidbody.Layer = _heldObject.Value.Layer;
+
 		_heldObject = null;
 	}
 
@@ -251,11 +272,21 @@ public class Player : Entity
 		var rigidbody = hit.Entity.GetComponent<RigidBodyComponent>();
 		if(rigidbody != null && rigidbody.BodyType == EBodyType.Dynamic)
 		{
+			// TODO: API to control whether an object experiences gravity.
 			_heldObject = new()
 			{
 				Rigidbody = rigidbody,
-				Transform = hit.Entity.GetComponent<TransformComponent>()!
+				Transform = hit.Entity.GetComponent<TransformComponent>()!,
+				
+				LinearDrag = rigidbody.LinearDrag,
+				AngularDrag = rigidbody.AngularDrag,
+
+				Layer = rigidbody.Layer
 			};
+
+			rigidbody.LinearDrag = HoldLinearDrag;
+			rigidbody.AngularDrag = HoldAngularDrag;
+			rigidbody.LayerName = "Player";
 
 			return;
 		}
