@@ -1,4 +1,3 @@
-using System;
 using Hazel;
 
 namespace INH;
@@ -66,6 +65,48 @@ public class Player : Entity
 		private State _newState;
 	/// State
 
+	/*
+	 * GTAO:
+	 * 		Radius: 2.5
+	 * 		Falloff Range: 0.01
+	 * 		Radius Multiplier: 1.0
+	 * 		Sample Dist Power: 3.0
+	 * 		Thin Occluder Compensation: 0.0
+	 * 		Final Value Power: 4.0
+	 * 		Depth MIP Sampling Offset: 1.0
+	 * 		Denoise Passes: 0
+	 * 
+	 * Bloom:
+	 * 		Threshold: 0.05
+	 * 		Knee: -0.2
+	 * 		Upsample Scale: 3.7
+	 * 		Intensity: 0.2
+	 * 
+	 * DOF:
+	 * 		Focus Distance: 1.8
+	 * 		Blur Size: 0.25
+	 */
+
+	private void SetRenderParameters()
+	{
+		SceneRenderer.DepthOfField.IsEnabled = true;
+		SceneRenderer.DepthOfField.FocusDistance = 1.8f;
+		SceneRenderer.DepthOfField.BlurSize = 0.25f;
+		
+		SceneRenderer.GTAO.EffectRadius = 2.5f;
+		SceneRenderer.GTAO.EffectFalloffRange = 0.01f;
+		SceneRenderer.GTAO.RadiusMultiplier = 1.0f;
+		SceneRenderer.GTAO.HalfRes = false;
+		SceneRenderer.GTAO.SampleDistributionPower = 3.0f;
+		SceneRenderer.GTAO.ThinOccluderCompensation = 0.0f;
+		SceneRenderer.GTAO.DepthMIPSamplingOffset = 1.0f;
+
+		SceneRenderer.Bloom.Threshold = 0.05f;
+		SceneRenderer.Bloom.Knee = -0.2f;
+		SceneRenderer.Bloom.UpsampleScale = 3.7f;
+		SceneRenderer.Bloom.Intensity = 0.2f;
+	}
+	
 	protected override void OnCreate()
 	{
 		_transform = GetComponent<TransformComponent>()!;
@@ -132,6 +173,7 @@ public class Player : Entity
 		{
 			case State.Normal:
 			{
+				SetRenderParameters();
 				//Input.SetCursorMode(CursorMode.Locked);
 				break;
 			}
